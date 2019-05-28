@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jw</groupId>
+    <artifactId>MockDataGenerator</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Generator</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.8</jdk.version>
+        <org.springframework.version>4.3.7.RELEASE</org.springframework.version>
+        <spring.shell.version>1.2.1.BUILD-SNAPSHOT</spring.shell.version>
+        <org.jackson.version>2.8.9</org.jackson.version>
+        <httpcore.version>4.4.3</httpcore.version>
+        <httpclient.version>4.5.1</httpclient.version>
+        <commons-codec.version>1.9</commons-codec.version>
+        <commons-logging.version>1.2</commons-logging.version>
+        <jackson>2.9.1</jackson>
+        <pagehelper.version>1.2.2</pagehelper.version>
+        <postgresql.version>42.1.4</postgresql.version>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

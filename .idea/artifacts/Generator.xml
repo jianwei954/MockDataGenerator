@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact name="Generator">
+    <output-path>$PROJECT_DIR$/out/artifacts/Generator</output-path>
+    <root id="root">
+      <element id="module-output" name="MockDataGenerator" />
+    </root>
+  </artifact>
+</component>
