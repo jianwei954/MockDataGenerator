@@ -72,6 +72,12 @@ public class TaskTimer extends TimerTask
                                 ps.setObject(i + 1, date);
                                 paramMap.put("param" + i, date);
                             }
+                            else if (param.equals("${timestamp.longValue}"))
+                            {
+                                java.sql.Timestamp date = new java.sql.Timestamp(new Date().getTime());
+                                ps.setObject(i + 1, date.getTime());
+                                paramMap.put("param" + i, date.getTime());
+                            }
                             else if (param.startsWith("${gps"))
                             {
                                 param = param.substring(2, param.length() - 1);
@@ -156,6 +162,23 @@ public class TaskTimer extends TimerTask
                                 else
                                 {
                                     float anInt = Float.parseFloat(paramChild[1]);
+                                    paramMap.put("param" + i, anInt);
+                                    ps.setObject(i + 1, anInt);
+                                }
+                            }
+                            else if (param.startsWith("${int"))
+                            {
+                                param = param.substring(2, param.length() - 1);
+                                String[] paramChild = param.split(",");
+                                if (paramChild[0].equals("int.random"))
+                                {
+                                    int anInt = random.nextInt(new Integer(paramChild[1]));
+                                    paramMap.put("param" + i, anInt);
+                                    ps.setObject(i + 1, anInt);
+                                }
+                                else
+                                {
+                                    int anInt = Integer.parseInt(paramChild[1]);
                                     paramMap.put("param" + i, anInt);
                                     ps.setObject(i + 1, anInt);
                                 }
